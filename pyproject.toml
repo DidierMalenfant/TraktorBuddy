@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "TraktorBuddy"
+description = "A helping hand for managing Traktor collections."
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+keywords = ["traktor", "dj"]
+authors = [
+  { name = "Didier Malenfant", email = "coding@malenfant.net" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["semver", "pytz"]
+
+dynamic = ["version"]
+
+[tool.hatch.version]
+path = "TraktorBuddy/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["TraktorBuddy"]
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest",
+  "pytest-cov",
+]
+
+[tool.hatch.envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=TraktorBuddy --cov=tests"
+no-cov = "cov --no-cov"
+
+[tool.hatch.envs.test]
+dependencies = [
+  "pytest"
+]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["37", "38", "39", "310"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+  "TraktorBuddy/__about__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[project.scripts]
+tktbud = "TraktorBuddy.__main__:main"

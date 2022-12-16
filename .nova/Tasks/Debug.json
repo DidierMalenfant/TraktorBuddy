@@ -1,0 +1,18 @@
+{
+  "extension" : {
+    "identifier" : "panic.Python",
+    "name" : "Python"
+  },
+  "extensionTemplate" : "pythonDebug",
+  "extensionValues" : {
+    "python.debug.customArgs" : [
+      "tag",
+      "add",
+      "Played:DPR",
+      "Damien Plays Records\/Episodes"
+    ],
+    "python.debug.module" : "TraktorBuddy",
+    "python.debug.workingDirectory" : "."
+  },
+  "openLogOnRun" : "fail"
+}
