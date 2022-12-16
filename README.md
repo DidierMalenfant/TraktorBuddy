@@ -6,7 +6,7 @@ A helping hand for managing **Traktor** collections.
 
 ### Installation
 
-**Traktor Buddy** is a pure Python project. It requires at least [Python](https://python.org) 3.7.
+**Traktor Buddy** is a pure Python project. It requires at least [Python](https://python.org) 3.8.
 
 You can install **Traktor Buddy** by typing the following in a terminal window:
 

@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "TraktorBuddy"
 description = "A helping hand for managing Traktor collections."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 license = "MIT"
 keywords = ["traktor", "dj"]
 authors = [
