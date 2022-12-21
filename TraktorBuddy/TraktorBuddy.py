@@ -108,6 +108,9 @@ class TraktorBuddy:
 
         nb_of_tracks_tagged: int = 0
         for track in tracks:
+            if track.isASample():
+                continue
+
             existing_value: str = track.comments2()
             if existing_value is None:
                 existing_value = tag_name
@@ -153,6 +156,9 @@ class TraktorBuddy:
 
         nb_of_tracks_tagged: int = 0
         for track in tracks:
+            if track.isASample():
+                continue
+
             existing_value: str = track.comments2()
             if existing_value is None:
                 continue
@@ -203,6 +209,9 @@ class TraktorBuddy:
 
         nb_of_tracks_tagged: int = 0
         for track in tracks:
+            if track.isASample():
+                continue
+
             existing_value: str = track.comments2()
             if existing_value is None:
                 continue
@@ -243,6 +252,9 @@ class TraktorBuddy:
 
         nb_of_tracks_tagged: int = 0
         for track in tracks:
+            if track.isASample():
+                continue
+
             release_date = track.releaseDate()
             if release_date is None:
                 continue
