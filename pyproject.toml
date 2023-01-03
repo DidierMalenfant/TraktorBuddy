@@ -22,6 +22,9 @@ dependencies = ["semver", "pytz"]
 
 dynamic = ["version"]
 
+[project.urls]
+Homepage = "https://github.com/DidierMalenfant/TraktorBuddy"
+
 [tool.hatch.version]
 path = "TraktorBuddy/__about__.py"
 
