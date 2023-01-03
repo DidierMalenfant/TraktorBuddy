@@ -41,7 +41,7 @@ class TraktorBuddy:
             if len(self._commands) == 0:
                 raise ArgumentError('Expected a command! Maybe start with `tktbud --help`?')
         except getopt.GetoptError:
-            TraktorBuddy.printUsage()
+            self.printUsage()
             sys.exit(0)
 
     def main(self) -> None:
